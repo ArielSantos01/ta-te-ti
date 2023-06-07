@@ -29,11 +29,9 @@ function Board ({ player1, player2}) {
                 return player1;
             }else{
                 return player2;
-            }
-                
+            }    
           }
         }
-        
         return null;
       }
     
@@ -58,25 +56,18 @@ function Board ({ player1, player2}) {
     useEffect(() => {
         const winner = calculateWinner(squares);
         if (winner) {
-            if (winner === player1) {
-            setScore1(score1 + 1);
-            }else {
-            setScore2(score2 + 1);
-            }
-        }
-          }, [squares]);
+            winner ===player1 ? setScore1(score1 + 1) : setScore2(score2 + 1);
+        }}, [squares]);
 
-    const winner = calculateWinner(squares) ;
+    const winner = calculateWinner(squares);
     let status;
     if (winner) {
         status = 'Ganador: ' + winner +'!!!';
-    } else {
-        if (squares.every((square) => square !== null)) {
-            status = 'Hubo un empate'
-          }else{
-            status = 'Es el turno de ' + (xIsNext ? player1 : player2);
-            }
-        }      
+    }else if (squares.every((square) => square !== null)) {
+        status = 'Hubo un empate'
+    }else{
+        status = 'Es el turno de ' + (xIsNext ? player1 : player2);
+    }      
 
     return(
         <div className='board'>

@@ -6,6 +6,7 @@ function EntryForm({ onStartGame }) {
   const [namePlayer1, setNamePlayer1] = useState('');
   const [namePlayer2, setNamePlayer2] = useState('');
 
+  //actualizar nombres cuando cambia el contenido de los input
   const handleNamePlayer1Change = (event) => {
     setNamePlayer1(event.target.value);
   };

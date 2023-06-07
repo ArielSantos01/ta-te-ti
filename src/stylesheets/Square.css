@@ -1,7 +1,7 @@
 .square{
     width: 150px;
     height: 150px;
-    background-color: #848484;
+    background-color: white;
     margin: 5px;
     transition: all .2s;
     border-radius: 0%;
