@@ -1,0 +1,12 @@
+.player{
+    width: 235px;
+    height: 40px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+    border: 1px solid black;
+    font-size: 20px;
+}
